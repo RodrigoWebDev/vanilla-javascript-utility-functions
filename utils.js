@@ -26,3 +26,15 @@ function doubleKeyPress(key1, key2, callback) {
     }
   }
 }
+
+function removeLeftZeros(str, char) {
+  let newStr = ""
+
+  for(let i = 0;i < str.length; i++){
+    if (str[i] !== char ){
+      newStr = str.slice(i, str.length)
+      break;
+    }
+  }
+  return newStr
+}
