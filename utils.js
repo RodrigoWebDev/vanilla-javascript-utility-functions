@@ -38,3 +38,17 @@ function removeLeftZeros(str, char) {
   }
   return newStr
 }
+
+function checkInvalideDate(date) {
+  let day = parseInt(date.split("/")[0])
+  let month = parseInt(date.split("/")[1])
+  if (month === 2 && day > 29) {
+    return true;
+  }else if((month === 4 || month === 6 || month === 9 || month === 11) && day > 30){
+    return true;
+  }else if(day > 31 || month > 12){
+    return true;
+  }else{
+    return false;
+  }
+}
